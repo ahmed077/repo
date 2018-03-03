@@ -3,9 +3,7 @@ document.body.onload = function () {
     "use strict";
     var EventForm = $('#megaReg');
     EventForm.on('submit', function (e) {
-        e.preventDefault();
         formValidation(e, e.target);
-
     });
 
 // Validates that the input string is a valid date formatted as "mm/dd/yyyy"
