@@ -3,6 +3,7 @@ document.body.onload = function () {
     "use strict";
     var EventForm = $('#megaReg');
     EventForm.on('submit', function (e) {
+        e.preventDefault();
         formValidation(e, e.target);
 
     });
@@ -75,12 +76,23 @@ document.body.onload = function () {
 
     function checkSelect(Form) {
         var selectBox = $('#' + Form + '  select');
-        if (selectBox.val() === '') {
-            selectBox.addClass('error');
-            return true;
-        } else {
-            selectBox.removeClass('error');
-            return false;
+        var error = false;
+        selectBox.each(function () {
+            if ($(this).val() === '') {
+                $(this).addClass('error');
+                error = true;
+                return true;
+            } else {
+                $(this).removeClass('error');
+            }
+        });
+        return error;
+            // if (selectBox.val() === '') {
+            //     selectBox.addClass('error');
+            //     return true;
+            // } else {
+            //     selectBox.removeClass('error');
+            //     return false;
+            // }
         }
-    }
-}
+    };
