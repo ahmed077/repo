@@ -133,7 +133,7 @@ if (isset($_SESSION['admin']) && intval($_SESSION['admin']) === 1) {
 
                 <div class="events-single-Registeration col-md-4 col-md-offset-2">
                    <h3>Please Fill Form Below</h3>
-                    <form method="POST" action="registration.php">
+                    <form method="POST" action="registration.php" id="megaReg">
                      <div class="form-group">
                         <label for="">Name</label>
                         <input name = "name" type="text" data-check="[a-zA-Z][a-zA-Z ]{4,}" class="form-control" placeholder="Enter Your Name" autocomplete="off" >
