@@ -134,6 +134,11 @@ if (isset($_SESSION['admin']) && intval($_SESSION['admin']) === 1) {
                 <div class="events-single-Registeration col-md-4 col-md-offset-2">
                    <h3>Please Fill Form Below</h3>
                     <form method="POST" action="registration.php" id="megaReg">
+                        <style>
+                            .error {
+                                border-color:red;
+                            }
+                        </style>
                      <div class="form-group">
                         <label for="">Name</label>
                         <input name = "name" type="text" data-check="[a-zA-Z][a-zA-Z ]{4,}" class="form-control" placeholder="Enter Your Name" autocomplete="off" >
@@ -162,7 +167,7 @@ if (isset($_SESSION['admin']) && intval($_SESSION['admin']) === 1) {
                         <input name = "nationalid" type="text" data-check="[0-9]{14}" class="form-control" placeholder="Enter your national ID" autocomplete="off" >
                       </div>
                       <select name = "educatio" class="form-control sel3" >
-                          <option disabled="disabled" selected="selected">Education level</option>
+                          <option disabled="disabled" selected="selected" value="">Education level</option>
                           <option value = "High School">High School</option>
                           <option value = "Collage">Collage</option>
                           <option value = "Graduated">Graduated</option>
@@ -172,12 +177,12 @@ if (isset($_SESSION['admin']) && intval($_SESSION['admin']) === 1) {
                         <input name="university" type="text" pattern="[a-zA-Z][a-zA-Z ]{4,}" class="form-control" placeholder="University / School" autocomplete="off" >
                       </div>
                       <select name = "a_status" class="form-control sel" >
-                          <option disabled="disabled" selected="selected">Acadimic Status</option>
+                          <option disabled="disabled" selected="selected" value="">Acadimic Status</option>
                           <option value="Undergraduate">Undergraduate</option>
                           <option value="Graduate">Graduate</option>
                       </select>
                       <select name="ieeemember" id="membershipS" class="form-control sel2" >
-                          <option disabled="disabled" selected="selected">IEEE Mebership</option>
+                          <option disabled="disabled" selected="selected" value="">IEEE Mebership</option>
                           <option value = "Member">Membership</option>
                           <option value = "Non-Member">Non-Membership</option>
                       </select>

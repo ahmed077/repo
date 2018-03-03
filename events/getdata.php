@@ -32,11 +32,11 @@ if ($_SESSION['admin'] && intval($_SESSION['admin']) === 1) {
             echo implode("\t", array_values($row)) . "\r\n";
         }
     } else {
-        header('Location: index.html');
+        header('Location: ../index.html');
     }
     exit();
 } else {
-    header("Location:index.html");
+    header("Location:../index.html");
     exit();
 }
 ?>
